@@ -4,7 +4,7 @@
   "description": "A tool made with the Quasar Framework to query your pokemons and their details.",
   "productName": "Pokedex Quasar",
   "cordovaId": "org.cordova.quasar.app",
-  "author": "eng.patrickmonteiro@gmail.com",
+  "author": "eng.patrickmonteiro@gmail.com, rafael.cdc97@gmail.com",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue src",

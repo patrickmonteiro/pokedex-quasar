@@ -17,22 +17,36 @@
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex'
 export default {
   name: 'Pokedex',
   data () {
     return {
-      pokemons: []
+      pokemon: []
     }
   },
   mounted () {
-    this.$axios.get('https://pokeapi.co/api/v2/pokemon/')
+    this.$q.loading.show()
+    this.recuperarPokedex()
       .then((res) => {
-        this.pokemons = res.data.results
-        console.log(res.data)
+        this.pokemon = this.pokemons.results
+        this.$q.loading.hide()
       })
       .catch(() => {
-
+        this.$q.loading.hide()
+        this.$q.notify({
+          message: `Ocorreu um erro`,
+          color: 'negative',
+          icon: 'warning',
+          position: 'top'
+        })
       })
+  },
+  computed: {
+    ...mapState('pokedex', ['pokemons'])
+  },
+  methods: {
+    ...mapActions('pokedex', ['recuperarPokedex'])
   }
 }
 </script>

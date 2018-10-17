@@ -13,26 +13,31 @@
           </q-card>
       </div>
     </div>
+    <pk-modal-pokedex></pk-modal-pokedex>
   </q-page>
 </template>
 
 <script>
+import PkModalPokedex from 'components/Pk-modal-pokedex'
 export default {
   name: 'Pokedex',
+  components: {
+    PkModalPokedex
+  },
   data () {
     return {
       pokemons: []
     }
   },
   mounted () {
-    this.$axios.get('https://pokeapi.co/api/v2/pokemon/')
-      .then((res) => {
-        this.pokemons = res.data.results
-        console.log(res.data)
-      })
-      .catch(() => {
+    // this.$axios.get('https://pokeapi.co/api/v2/pokemon/')
+    //   .then((res) => {
+    //     this.pokemons = res.data.results
+    //     console.log(res.data)
+    //   })
+    //   .catch(() => {
 
-      })
+    //   })
   }
 }
 </script>

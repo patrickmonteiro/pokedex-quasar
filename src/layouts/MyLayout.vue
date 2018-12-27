@@ -17,7 +17,7 @@
         </q-btn>
 
         <q-toolbar-title>
-          Quasar App
+          Pokedex Quasar
           <div slot="subtitle">Running on Quasar v{{ $q.version }}</div>
         </q-toolbar-title>
       </q-toolbar>
@@ -33,10 +33,10 @@
         inset-delimiter
       >
         <q-list-header>Menu</q-list-header>
-        <q-item to="/" link>
+        <!-- <q-item to="/" link>
           <q-item-side icon="home" />
           <q-item-main label="Home" />
-        </q-item>
+        </q-item> -->
         <q-item to="/pokedex" link>
           <q-item-side icon="home" />
           <q-item-main label="Pokedex" />
@@ -57,7 +57,7 @@ export default {
   name: 'MyLayout',
   data () {
     return {
-      leftDrawerOpen: this.$q.platform.is.desktop
+      leftDrawerOpen: false // this.$q.platform.is.desktop
     }
   },
   methods: {

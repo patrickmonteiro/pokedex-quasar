@@ -6,7 +6,7 @@
         :glossy="$q.theme === 'mat'"
         :inverted="$q.theme === 'ios'"
       >
-        <q-btn
+        <!-- <q-btn
           flat
           dense
           round
@@ -14,7 +14,7 @@
           aria-label="Menu"
         >
           <q-icon name="menu" />
-        </q-btn>
+        </q-btn> -->
 
         <q-toolbar-title>
           Pokedex Quasar
@@ -23,7 +23,7 @@
       </q-toolbar>
     </q-layout-header>
 
-    <q-layout-drawer
+    <!-- <q-layout-drawer
       v-model="leftDrawerOpen"
       :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
     >
@@ -33,16 +33,12 @@
         inset-delimiter
       >
         <q-list-header>Menu</q-list-header>
-        <!-- <q-item to="/" link>
-          <q-item-side icon="home" />
-          <q-item-main label="Home" />
-        </q-item> -->
         <q-item to="/pokedex" link>
           <q-item-side icon="home" />
           <q-item-main label="Pokedex" />
         </q-item>
       </q-list>
-    </q-layout-drawer>
+    </q-layout-drawer> -->
 
     <q-page-container>
       <router-view />

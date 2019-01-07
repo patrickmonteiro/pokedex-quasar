@@ -8,7 +8,7 @@
              <q-inner-loading :visible="loading">
               <!-- <q-spinner-gears size="50px" color="primary"></q-spinner-gears> -->
             </q-inner-loading>
-            <div v-if="pokemon.id & !loading" class="row items-center text-center" style="height: 15vh;">
+            <div v-if="pokemon.id" class="row items-center text-center" style="height: 15vh;">
               <div class="col">
                 <img v-if="pokemon.sprites" :src="pokemon.sprites.front_default" width="150vh" />
               </div>
@@ -18,7 +18,7 @@
             </div>
             <div v-else class="row items-center text-center" style="height:40vh" >
               <div class="col">
-                <img src="statics/POKEDEXQUASAR.png" v-show="!loading" width="240vh" />
+                <img src="statics/POKEDEXQUASAR.png" width="240vh" />
               </div>
             </div>
           </q-card-media>

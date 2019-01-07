@@ -67,7 +67,8 @@ module.exports = function (ctx) {
         'QModalLayout',
         'QInput',
         'QScrollArea',
-        'QCollapsible'
+        'QCollapsible',
+        'QInnerLoading'
       ],
       directives: [
         'Ripple'

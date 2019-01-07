@@ -1,4 +1,6 @@
 export default {
   pokemons: [],
-  pokemon: {}
+  pokemon: {},
+  erro_busca: '',
+  loading: false
 }
